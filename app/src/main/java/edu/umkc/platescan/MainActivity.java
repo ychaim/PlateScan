@@ -29,8 +29,9 @@ public class MainActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                //Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG).setAction("Action", null).show();
+                Intent scannerIntent = new Intent(MainActivity.this, ScannerActivity.class);
+                MainActivity.this.startActivity(scannerIntent);
             }
         });
 
@@ -82,8 +83,7 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_camera) {
-            Intent scannerIntent = new Intent(MainActivity.this, ScannerActivity.class);
-            MainActivity.this.startActivity(scannerIntent);
+
         } else if (id == R.id.nav_gallery) {
 
         } else if (id == R.id.nav_slideshow) {
