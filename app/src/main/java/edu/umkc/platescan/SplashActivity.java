@@ -24,7 +24,10 @@ public class SplashActivity extends AppCompatActivity {
         // Make sure this is before calling super.onCreate
         setTheme(R.style.AppTheme_Launcher);
         super.onCreate(savedInstanceState);
-        ActivityCompat.requestPermissions(SplashActivity.this, new String[] {Manifest.permission.CAMERA}, 0);
+        ActivityCompat.requestPermissions(SplashActivity.this, new String[] {
+                Manifest.permission.CAMERA,
+                Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                Manifest.permission.ACCESS_FINE_LOCATION}, 0);
 
         /*
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
