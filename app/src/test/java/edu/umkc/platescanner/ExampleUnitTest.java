@@ -1,4 +1,4 @@
-package edu.umkc.platescan;
+package edu.umkc.platescanner;
 
 import org.junit.Test;
 

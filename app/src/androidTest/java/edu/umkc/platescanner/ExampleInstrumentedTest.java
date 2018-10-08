@@ -1,4 +1,4 @@
-package edu.umkc.platescan;
+package edu.umkc.platescanner;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("edu.umkc.platescan", appContext.getPackageName());
+        assertEquals("edu.umkc.platescanner", appContext.getPackageName());
     }
 }

@@ -1,4 +1,4 @@
-package edu.umkc.platescan.scanner;
+package edu.umkc.platescanner.scanner;
 
 import java.io.IOException;
 import java.util.List;

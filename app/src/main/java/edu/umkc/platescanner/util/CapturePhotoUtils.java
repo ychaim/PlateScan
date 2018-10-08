@@ -1,4 +1,4 @@
-package edu.umkc.platescan.util;
+package edu.umkc.platescanner.util;
 
 import android.content.ContentResolver;
 import android.content.ContentUris;
