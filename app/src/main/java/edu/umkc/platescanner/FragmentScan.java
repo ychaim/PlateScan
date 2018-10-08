@@ -85,6 +85,11 @@ public class FragmentScan extends Fragment {
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_scan, container, false);
+        try {
+            return inflater.inflate(R.layout.fragment_scan, container, false);
+        } catch (Exception e) {
+            Log.println(Log.ASSERT, "ERROR", e.getMessage());
+        }
+        return null;
     }
 }
