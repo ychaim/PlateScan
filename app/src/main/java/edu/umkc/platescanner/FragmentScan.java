@@ -22,6 +22,7 @@ import android.view.Window;
 import android.view.WindowManager;
 
 import edu.umkc.platescanner.scanner.CameraPreview;
+import edu.umkc.platescanner.scanner.ScanLicensePlate;
 
 public class FragmentScan extends Fragment {
 
@@ -76,7 +77,9 @@ public class FragmentScan extends Fragment {
                     // jpeg
                     @Override
                     public void onPictureTaken(byte[] data, Camera camera) {
-
+                        try (FileOutputStream fos = new FileOutputStream(ANDROID_DATA_DIR + File.separatorChar + "runtime_data" + File.separatorChar + "temp_img_file")) {
+                            fos.write(data);
+                        }
                     }
                 });
             }
