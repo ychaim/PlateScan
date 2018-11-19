@@ -1,10 +1,13 @@
 package edu.umkc.platescanner.scanner;
 
+import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.graphics.BitmapFactory;
 import android.hardware.Camera;
 import android.hardware.Camera.Parameters;
 import android.hardware.Camera.Size;
@@ -19,12 +22,14 @@ import org.openalpr.OpenALPR;
 import org.openalpr.model.Results;
 import org.openalpr.model.ResultsError;
 
-public static class ScanLicensePlate {
+import edu.umkc.platescanner.MainActivity;
+
+public class ScanLicensePlate {
 
     private static String ANDROID_DATA_DIR = "data/data/edu.umkc.platescanner";
     
     
-    public static bool isLicensePlate(File pictureFile) {
+    public static boolean isLicensePlate(File pictureFile) {
 
         if (pictureFile == null) {
             return false;
